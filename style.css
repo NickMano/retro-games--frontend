@@ -1,11 +1,11 @@
 body{
     margin: 0;
-    background-color: #8F57FD;
+    background-color: #121212;
     font-family: 'Muli', sans-serif
 }
 
 header{
-    background-color: #8F57FD;
+    background-color: #121212;
     width: 100%;
     height: 80px;
     display: flex;
@@ -14,7 +14,7 @@ header{
 }
 
 .header--green {
-    background-color: #21c08b;
+    background-color: #262232;
 }
 
 .header__img{
@@ -74,7 +74,7 @@ header{
 }
 
 .search__input {
-    background-color: #A8F;
+    background-color: #4d4d4d;
     height: 50px;
     border-radius: 25px;
     border: 2px solid white;
@@ -172,7 +172,7 @@ header{
 
 /* LOGIN */
 .login {
-    background: linear-gradient(#21c08b, #8F57FD);
+    background: linear-gradient(#262232, #121212);
     min-height: calc(100vh - 200px);
     display: flex;
     align-items: center;
@@ -230,6 +230,10 @@ header{
     border: none
 }
 
+.login__container--button:focus {
+    outline: none;
+}
+
 .login__container--remember-me {
     color: white;
     display: flex;
@@ -276,6 +280,22 @@ header{
 }
 
 .login__container--register a:hover {
+    text-decoration: underline;
+}
+
+.login__container--login {
+    display: flex;
+    justify-content: center;
+}
+
+.login__container--login a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login__container--login a:hover {
     text-decoration: underline;
 }
 
