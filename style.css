@@ -99,6 +99,12 @@ header{
     position: relative;
 }
 
+.carousel__title{
+    color: white;
+    margin: 20px 30px;
+    font-size: 16px ;
+}
+
 .carousel__container {
     white-space: nowrap;
     margin: 70px 30px;
