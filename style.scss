@@ -1,23 +1,27 @@
-$main-black-color: #121212;
-$main-grey-color: #262232;
+$primary-color: #121212;
+$secondary-color: #262232;
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
 
 body{
     margin: 0;
-    background-color: $main-black-color;
+    background-color: $primary-color;
     font-family: 'Muli', sans-serif
 }
 
 header{
-    background-color: $main-black-color;
+    background-color: $primary-color;
     width: 100%;
     height: 80px;
-    display: flex;
+    @extend .flex-center;
     justify-content: space-between;
-    align-items: center;
 }
 
 .header--green {
-    background-color: $main-grey-color;
+    background-color: $secondary-color;
 }
 
 .header__img{
@@ -48,13 +52,13 @@ header{
     text-align: right;
     margin: 0 0 0 -4px;
 }
+
 .header__menu li {
     margin: 16px 0 24px;
 }
 
 .header__menu--profile {
-    display: flex;
-    align-items: center;
+    @extend .flex-center;
     color: white;
 }
 
@@ -65,9 +69,8 @@ header{
 .search {
     margin-top: 60px;
     height: 300px;
-    display: flex;
+    @extend .flex-center;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     color: white;
 }
@@ -181,10 +184,9 @@ header{
 
 /* LOGIN */
 .login {
-    background: linear-gradient($main-grey-color, $main-black-color);
+    background: linear-gradient($secondary-color, $primary-color);
     min-height: calc(100vh - 200px);
-    display: flex;
-    align-items: center;
+    @extend .flex-center;
     justify-content: center;
 }
 
@@ -265,8 +267,7 @@ header{
 }
 
 .login__container--social-media > div {
-    display: flex;
-    align-items: center;
+    @extend .flex-center;
     margin-bottom: 10px;
     font-size: 14px;
 }
@@ -311,8 +312,7 @@ header{
 .footer {
     width: 100%;
     height: 100px;
-    display: flex;
-    align-items: center;
+    @extend .flex-center;
 }
 
 .footer a {
@@ -329,12 +329,11 @@ header{
 
 .error {
     width: 100%;
-    display: flex;
+    @extend .flex-center;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: calc(100vh - 180px);
-    background: linear-gradient($main-grey-color, $main-black-color);
+    background: linear-gradient($secondary-color, $primary-color);
 }
 
 .error__image{
