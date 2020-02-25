@@ -322,6 +322,36 @@ header{
     text-decoration: underline;
 }
 
+/* Error */
+
+.error {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    background: linear-gradient(#262232, #121212);
+}
+
+.error__image{
+    width: 200px;
+}
+
+.error__title {
+    color: white;
+    font-size: 100px;
+    margin: 0;
+}
+
+.error__subtitle {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+}
+
 @media screen and (max-width: 600px) {
     .login__container {
         border: none;
