@@ -20,10 +20,10 @@ const precache = async () => {
     return cache.addAll([
         './src/mediaPlayer/',
         './src/mediaPlayer/index.html',
-        './src/mediaPlayer//assets/index.js',
-        './src/mediaPlayer//assets/MediaPlayer.js',
-        './src/mediaPlayer//assets/plugins/AutoPause.js',
-        './src/mediaPlayer//assets/plugins/AutoPlay.js',
+        './src/mediaPlayer//assets/index.ts',
+        './src/mediaPlayer//assets/MediaPlayer.ts',
+        './src/mediaPlayer//assets/plugins/AutoPause.ts',
+        './src/mediaPlayer//assets/plugins/AutoPlay.ts',
         './src/mediaPlayer//assets/index.css',
         './src/mediaPlayer//assets/BigBunny.mp4'
     ])

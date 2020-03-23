@@ -1,4 +1,7 @@
 class MediaPlayer {
+    media: any
+    plugins: any
+    
     constructor(config) {
         this.media = config.el
         this.plugins = config.plugins || []
