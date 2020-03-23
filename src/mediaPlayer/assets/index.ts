@@ -5,7 +5,7 @@ import AutoPause from './plugins/AutoPause'
 const video: HTMLElement = document.getElementById('principalVideo')
 const playButton: HTMLElement  = document.getElementById('playButton')
 const muteButton: HTMLElement = document.getElementById('muteButton')
-const player: MediaPlayer = new MediaPlayer( {el: video, plugins: [
+const player = new MediaPlayer( {el: video, plugins: [
 
 ]})
 

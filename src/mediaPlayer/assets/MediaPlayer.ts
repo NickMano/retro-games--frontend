@@ -1,11 +1,11 @@
 class MediaPlayer {
-    media: any
-    plugins: any
+    media: HTMLMediaElement
+    plugins: Array<any>
     
     constructor(config) {
         this.media = config.el
         this.plugins = config.plugins || []
-        this._initPlugins()
+        this.initPlugins()
     }
     play() { return this.media.play() }
     pause() { return this.media.pause() }
@@ -22,7 +22,7 @@ class MediaPlayer {
             : this.mute()
     }
 
-    _initPlugins() {
+    private initPlugins() {
         this.plugins.forEach( plugin => {
             plugin.run(this)
         })           
