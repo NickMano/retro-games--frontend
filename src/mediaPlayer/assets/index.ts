@@ -2,10 +2,10 @@ import MediaPlayer from './MediaPlayer.js'
 import AutoPlay from './plugins/AutoPlay.js'
 import AutoPause from './plugins/AutoPause.js'
 
-const video = document.getElementById('principalVideo')
-const playButton = document.getElementById('playButton')
-const muteButton = document.getElementById('muteButton')
-const player = new MediaPlayer( {el: video, plugins: [
+const video: HTMLElement = document.getElementById('principalVideo')
+const playButton: HTMLElement  = document.getElementById('playButton')
+const muteButton: HTMLElement = document.getElementById('muteButton')
+const player: MediaPlayer = new MediaPlayer( {el: video, plugins: [
 
 ]})
 
