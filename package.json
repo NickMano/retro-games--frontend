@@ -1,7 +1,7 @@
 {
   "name": "platziVideo",
   "version": "1.0.0",
-  "description": "",
+  "description": "PlatziVideo is a platform to view videos make it with React",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +22,9 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   }
 }
