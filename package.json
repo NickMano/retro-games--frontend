@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cleanup": "rm -rf .cache dist",
-    "start": "npm run cleanup && parcel ./src/mediaPlayer/index.html"
+    "start": "npm run cleanup && parcel ./src/mediaPlayer/index.html",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,12 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.1.0",
+    "html-loader": "^1.0.0",
+    "html-webpack-plugin": "^4.0.1",
     "parcel-bundler": "^1.12.4",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "react": "^16.13.1",
