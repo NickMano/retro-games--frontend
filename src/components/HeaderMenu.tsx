@@ -14,6 +14,4 @@ const HeaderMenu = () => (
     </div>
 )
 
-
-
 export default HeaderMenu
