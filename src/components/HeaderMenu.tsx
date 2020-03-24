@@ -1,5 +1,5 @@
 import React from 'react'
-import './../assets/styles/Header.scss'
+import './../assets/styles/components/Header.scss'
  
 const HeaderMenu = () => (
     <div className="header__menu">

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import HeaderMenu from './HeaderMenu'
-import '../assets/styles/Header.scss'
+import '../assets/styles/components/Header.scss'
  
 class Header extends Component {
 
