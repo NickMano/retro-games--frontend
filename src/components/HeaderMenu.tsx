@@ -1,11 +1,11 @@
 import React from 'react'
 import './../assets/styles/components/Header.scss'
-import user from '../assets/static/icons8-user-24.png'
+import userIcon from '../assets/static/icons8-user-24.png'
  
 const HeaderMenu = () => (
     <div className="header__menu">
         <div className="header__menu--profile">
-            <img src={user} alt="user" />
+            <img src={userIcon} alt="user" />
             <p>Perfil</p>
         </div>
         <ul>
