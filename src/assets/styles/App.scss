@@ -1,0 +1,17 @@
+@import './Vars.scss';
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+body{
+    margin: 0;
+    background-color: $primary-color;
+    font-family: $theme-font;
+    color: white
+}
+
+::placeholder{
+    color: white;
+}

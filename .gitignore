@@ -1,4 +1,8 @@
 .DS_Store
+.vscode
 node_modules
 .cache
 dist
+.npm
+.eslintcache
+.env
