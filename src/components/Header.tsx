@@ -11,8 +11,7 @@ class Header extends Component {
         } 
     }
     render() {
-        let { isLogin } = this.state
-        console.log(isLogin)
+        let isLogin = this.state
         return(
             <header className="header">
                 <img className="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="Platzi Video" />

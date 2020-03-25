@@ -6,6 +6,7 @@ class AutoPause {
     
     constructor() {
         this.threshold = 0.5
+        this.player = new MediaPlayer({})
         this.handleIntersection = this.handleIntersection.bind(this)
         this.handleVisibility = this.handleVisibility.bind(this)
     }

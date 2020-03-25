@@ -1,6 +1,6 @@
 import React from 'react'
 import './../assets/styles/components/Header.scss'
-import userIcon from '../assets/static/icons8-user-24.png'
+const userIcon = require('../assets/static/icons8-user-24.png')
  
 const HeaderMenu = () => (
     <div className="header__menu">
