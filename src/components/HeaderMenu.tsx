@@ -1,5 +1,6 @@
 import React from 'react'
 import './../assets/styles/components/Header.scss'
+import { Link } from 'react-router-dom'
 const userIcon = require('../assets/static/icons8-user-24.png')
  
 const HeaderMenu = () => (
@@ -9,8 +10,8 @@ const HeaderMenu = () => (
             <p>Perfil</p>
         </div>
         <ul>
-            <li><a href="#">Cuenta</a></li>
-            <li><a href="#">Cerrar sesion</a></li>
+            <li><Link to='/login'>Cuenta</Link></li>
+            <li><Link to='/login'>Iniciar sesion</Link></li>
         </ul>
     </div>
 )

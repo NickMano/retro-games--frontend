@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 import '../assets/styles/components/Login.scss'
+import { Link } from 'react-router-dom'
  
 const Login: React.FC = () => (
     <>
@@ -25,7 +26,9 @@ const Login: React.FC = () => (
                     <div><img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Google_icon-icons.com_66793.png" alt="Google" />Inicia sesión con Google</div>
                     <div><img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Twitter_icon-icons.com_66803.png" alt="Twitter"/>Inicia sesión con Twitter</div>
                 </section>
-                <p className="login__container--register">No tienes ninguna cuenta <a href="">Regístrate</a></p>
+                <p className="login__container--register">No tienes ninguna cuenta 
+                    <Link to='/register'> Regístrate</Link>
+                </p>
             </section>
         </section>
     </>
