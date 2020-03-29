@@ -1,0 +1,28 @@
+@import '../App.scss';
+
+.error {
+    width: 100%;
+    @extend .flex-center;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 180px);
+    background: linear-gradient($secondary-color, $primary-color);
+}
+
+.error__image{
+    width: 200px;
+}
+
+.error__title {
+    color: white;
+    font-size: 100px;
+    margin: 0;
+}
+
+.error__subtitle {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+}
