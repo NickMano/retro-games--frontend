@@ -11,13 +11,13 @@ import '../assets/styles/App.scss'
 
 const API = 'http://localhost:3000/initalState'
  
-const App: React.FC = () => {
+const Home: React.FC = () => {
 
     const initialState = useInitialState(API)
 
     return(
         <div className="App">
-            <Header />
+            <Header isLogin={false} secondColor={false} />
             <Search />
             { initialState.mylist?.length > 0 &&
                 <Carousel title='Mi Lista'>
@@ -42,4 +42,4 @@ const App: React.FC = () => {
         </div>
 )}
 
-export default App
+export default Home

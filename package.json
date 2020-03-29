@@ -2,7 +2,7 @@
   "name": "platziVideo",
   "version": "1.0.0",
   "description": "PlatziVideo is a platform to view videos make it with React",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/NickMano/platziVideo#readme",
   "devDependencies": {
+    "@types/react": "^16.9.25",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-router-dom": "^5.1.3",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
@@ -46,9 +49,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "@types/react": "^16.9.25",
-    "@types/react-dom": "^16.9.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
   }
 }
