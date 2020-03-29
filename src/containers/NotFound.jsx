@@ -1,12 +1,10 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import '../assets/styles/components/NotFound.scss'
 const errorIcon = require('../assets/static/icons8-info-200.png')
 
 import '../assets/styles/App.scss'
  
-const Error: React.FC = () => (
+const Error = () => (
     <div className="Login">
         <section className="error">
             <img src={errorIcon} alt="Something was wrong" className="error__image" />

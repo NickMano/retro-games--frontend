@@ -1,11 +1,8 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-
 import '../assets/styles/components/Login.scss'
 import { Link } from 'react-router-dom'
  
-const Register: React.FC = () => (
+const Register = () => (
     <>
         <section className="login">
             <section className="login__container">
