@@ -16,8 +16,7 @@ const Home: React.FC = () => {
     const initialState = useInitialState(API)
 
     return(
-        <div className="App">
-            <Header isLogin={false} secondColor={false} />
+        <>
             <Search />
             { initialState.mylist?.length > 0 &&
                 <Carousel title='Mi Lista'>
@@ -38,8 +37,7 @@ const Home: React.FC = () => {
                 </Carousel>
             }
 
-            <Footer />
-        </div>
+        </>
 )}
 
 export default Home

@@ -5,8 +5,7 @@ import Footer from '../components/Footer'
 import '../assets/styles/components/Login.scss'
  
 const Login: React.FC = () => (
-    <div>
-        <Header isLogin={false} secondColor={true} />
+    <>
         <section className="login">
             <section className="login__container">
                 <h2 className="login__container--title">Inicia Sesion</h2>
@@ -29,8 +28,7 @@ const Login: React.FC = () => (
                 <p className="login__container--register">No tienes ninguna cuenta <a href="">Regístrate</a></p>
             </section>
         </section>
-        <Footer />
-    </div>
+    </>
 )
 
 export default Login
