@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/styles/components/CarouselItem.scss'
-const playIcon = require('../assets/static/icons8-circled-play-50.png')
-const plusIcon = require('../assets/static/icons8-add-50.png')
+import playIcon from '../assets/static/icons8-circled-play-50.png'
+import plusIcon from '../assets/static/icons8-add-50.png'
 
 
 const CarouselItem = ({cover, title, year, contentRating}) => (

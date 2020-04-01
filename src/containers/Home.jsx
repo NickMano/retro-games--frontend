@@ -10,6 +10,7 @@ const Home = ({myList, trends, originals}) => {
     return(
         <>
             <Search />
+
             { myList?.length > 0 &&
                 <Carousel title='Mi Lista'>
                     {myList.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
@@ -34,7 +35,7 @@ const Home = ({myList, trends, originals}) => {
 
 const mapStateToProps = state => {
     return {
-        mylist: state.mylist,
+        myList: state.myList,
         originals: state.originals,
         trends: state.trends,
     }
