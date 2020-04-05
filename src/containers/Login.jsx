@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { connect } from 'react-redux'
 import '../assets/styles/components/Login.scss'
 import { Link } from 'react-router-dom'
-import { setUser } from '../actions'
+import { loginRequest } from '../actions'
 
  
 const Login = props => {
@@ -17,7 +17,7 @@ const Login = props => {
     
     const handleSubmit = event => {
         event.preventDefault()
-        props.setUser(form)
+        props.loginRequest(form)
         props.history.push('/')
     }
     return(
@@ -64,7 +64,7 @@ const Login = props => {
 }
 
 const mapDispachToProps =  {
-    setUser
+    loginRequest
 }
 
 export default connect(null, mapDispachToProps)(Login)
