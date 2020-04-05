@@ -138,7 +138,7 @@ const initialState = {
         "year": 2015,
         "contentRating": "16+",
         "duration": 226,
-        "cover": "",
+        "cover": "http://dummyimage.com/800x600.png/577380/ffffff",
         "description": "Vestibulum ac est lacinia nisi venenatis tristique",
         "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
       },
