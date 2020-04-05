@@ -1,8 +1,11 @@
 import React, {useState} from 'react'
+import { connect } from 'react-redux'
 import '../assets/styles/components/Login.scss'
 import { Link } from 'react-router-dom'
+import { setUser } from '../actions'
+
  
-const Login = () => {
+const Login = props => {
     const [form, setValues] = useState({ email : ''})
 
     const handleInput = event => {
@@ -14,7 +17,8 @@ const Login = () => {
     
     const handleSubmit = event => {
         event.preventDefault()
-        console.log(form)
+        props.setUser(form)
+        props.history.push('/')
     }
     return(
         <>
@@ -59,4 +63,8 @@ const Login = () => {
     )
 }
 
-export default Login
+const mapDispachToProps =  {
+    setUser
+}
+
+export default connect(null, mapDispachToProps)(Login)
