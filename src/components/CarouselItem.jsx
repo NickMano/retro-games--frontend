@@ -39,9 +39,9 @@ const CarouselItem = props => {
     )
 }
 
-const mapDispachToProps =  {
+const mapDispatchToProps =  {
     setFavorite,
     deleteFavorite
 }
 
-export default connect(null, mapDispachToProps)(CarouselItem)
+export default connect(null, mapDispatchToProps)(CarouselItem)
