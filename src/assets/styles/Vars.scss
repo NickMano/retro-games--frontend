@@ -1,5 +1,33 @@
 @import url(https://fonts.googleapis.com/css?family=Muli&display=swap);
 
-$theme-font: 'Muli', sans-serif;
+$theme-font: "Muli", sans-serif;
 $primary-color: #121212;
 $secondary-color: #262232;
+
+//layout
+
+$xs: 360px;
+$s: 440px;
+$m: 768px;
+$l: 1280px;
+$xl: 1440px;
+
+@mixin for-size($size) {
+  @if $size == s {
+    @media (min-width: $s) {
+      @content;
+    }
+  } @else if $size == m {
+    @media (min-width: $m) {
+      @content;
+    }
+  } @else if $size == l {
+    @media (min-width: $l) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: $xl) {
+      @content;
+    }
+  }
+}
