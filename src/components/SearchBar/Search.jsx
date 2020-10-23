@@ -6,7 +6,7 @@ const Search = props => {
 
     return(
         <section className="search">
-            <h2 className="search__title">¿Que quieres ver hoy?</h2>
+            <h2 className="search__title">¿Que videojuego buscas?</h2>
             <input 
                 type="text" 
                 className="search__input" 

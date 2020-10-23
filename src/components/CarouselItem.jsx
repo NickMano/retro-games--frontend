@@ -8,11 +8,11 @@ import deleteIcon from '../images/icons8-remove-50.png'
 
 
 const CarouselItem = props => {
-    const {id, cover, title, year, contentRating, duration, isMyList} = props
+    const {id, cover, title, year, contentRating, isMyList} = props
     
     const handleSetFavorite = () => {
         props.setFavorite(
-            {id, cover, title, year, contentRating, duration}
+            {id, cover, title, year, contentRating}
         )
     }
 
@@ -32,7 +32,7 @@ const CarouselItem = props => {
                 </div>
                 <p className="carousel-item__details--title"> {title}</p>
                 <p className="carousel-item__details--subtitle">
-                    {`${year} ${contentRating} ${duration}min`}
+                    {`${year} ${contentRating}`}
                 </p>
             </div>
         </div>

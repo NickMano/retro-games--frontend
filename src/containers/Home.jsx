@@ -6,24 +6,38 @@ import CarouselItem from '../components/CarouselItem'
 
 import '../assets/styles/base.scss'
  
-const Home = ({myList, trends, originals}) => {
+const Home = ({myList, trends, switchGames, psxGames, nesGames}) => {
     const [query, setQuery] = useState("")
     const filteredTrends = trends.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
-    const filteredOriginals = originals.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
+    const filteredSwitchGames = switchGames.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
+    const filteredPsxGames = psxGames.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
+    const filteredNesGames = nesGames.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
 
     return(
         <>
             <Search value={query} handleChange={(e) => setQuery(e.target.value) } />
 
             { myList?.length > 0 &&
-                <Carousel title='Mi Lista'>
+                <Carousel title='Mis Favoritos'>
                     {myList.map( item =>  <CarouselItem isMyList key={item.id} {...item}/> ) }
                 </Carousel>
             }
 
-            { filteredOriginals?.length > 0 &&
-                <Carousel title='Añadidos Recientemente'>
-                    {filteredOriginals.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
+            { filteredNesGames?.length > 0 &&
+                <Carousel title='Juegos de NES'>
+                    {filteredNesGames.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
+                </Carousel>
+            }
+
+            { filteredPsxGames?.length > 0 &&
+                <Carousel title='Juegos de Playstation 1'>
+                    {filteredPsxGames.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
+                </Carousel>
+            }
+
+            { filteredSwitchGames?.length > 0 &&
+                <Carousel title='Juegos de Switch'>
+                    {filteredSwitchGames.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
                 </Carousel>
             }
 
@@ -39,7 +53,9 @@ const Home = ({myList, trends, originals}) => {
 const mapStateToProps = state => {
     return {
         myList: state.myList,
-        originals: state.originals,
+        switchGames: state.switchGames,
+        psxGames: state.psxGames,
+        nesGames: state.nesGames,
         trends: state.trends,
     }
 }

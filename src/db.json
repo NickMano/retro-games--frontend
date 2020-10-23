@@ -36,17 +36,7 @@
       "description": "Vestibulum ac est lacinia nisi venenatis tristique",
       "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
     },
-    {
-      "id": 5,
-      "title": "Astral Chains",
-      "type": "Rol",
-      "language": "English",
-      "year": 2019,
-      "contentRating": "16+",
-      "cover": "https://cdn.shopify.com/s/files/1/0747/3829/products/mL3505_1024x1024.jpg?v=1571445728",
-      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
-      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
-    },
+    
     {
       "id": 6,
       "title": "Final Fantasy XIV - Shadowbringers",
@@ -57,22 +47,44 @@
       "cover": "https://i.pinimg.com/originals/16/f4/9f/16f49ff34af43c96147ea823b8b15465.jpg",
       "description": "Vestibulum ac est lacinia nisi venenatis tristique",
       "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
-    },
-    {
-      "id": 7,
-      "title": "Super Smash Bros. Ultimate",
-      "type": "Action",
-      "language": "English",
-      "year": 2018,
-      "contentRating": "16+",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/71RX-Ma8uNL._AC_SY741_.jpg",
-      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
-      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
     }
   ],
-  "originals": [
+  "switchGames": [
     {
       "id": 1,
+      "title": "Super Mario Odyssey",
+      "type": "Adventure",
+      "language": "English",
+      "year": 2017,
+      "contentRating": "16+",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/714-K97sf2L._AC_SY741_.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Xenoblade Chronicles: Definitive Edition",
+      "type": "Rol",
+      "language": "English",
+      "year": 2017,
+      "contentRating": "16+",
+      "cover": "https://cdn.shopify.com/s/files/1/0747/3829/products/mL4395_1024x1024.jpg?v=1589304128",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Mario Kart 8 Deluxe",
+      "type": "Drive",
+      "language": "English",
+      "year": 2017,
+      "contentRating": "16+",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71pPBrKODxL._AC_SY679_.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 4,
       "title": "Luigui's Mansion 3",
       "type": "Action",
       "language": "English",
@@ -83,24 +95,35 @@
       "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
     },
     {
-      "id": 2,
+      "id": 5,
+      "title": "Super Smash Bros. Ultimate",
+      "type": "Action",
+      "language": "English",
+      "year": 2018,
+      "contentRating": "16+",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/71RX-Ma8uNL._AC_SY741_.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 6,
+      "title": "Astral Chains",
+      "type": "Rol",
+      "language": "English",
+      "year": 2019,
+      "contentRating": "16+",
+      "cover": "https://cdn.shopify.com/s/files/1/0747/3829/products/mL3505_1024x1024.jpg?v=1571445728",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 7,
       "title": "The Legend of Zelda Breath of the Wild",
       "type": "Action",
       "language": "English",
       "year": 2017,
       "contentRating": "16+",
       "cover": "https://images-na.ssl-images-amazon.com/images/I/71p%2BU0d%2BumL._AC_SL1024_.jpg",
-      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
-      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
-    },
-    {
-      "id": 10,
-      "title": "Super Mario Bros. 3",
-      "type": "Adventure 2D",
-      "language": "English",
-      "year": 1998,
-      "contentRating": "16+",
-      "cover": "https://images-na.ssl-images-amazon.com/images/I/613Py5NEsSL._AC_SY741_.jpg",
       "description": "Vestibulum ac est lacinia nisi venenatis tristique",
       "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
     },
@@ -123,6 +146,153 @@
       "year": 2018,
       "contentRating": "16+",
       "cover": "https://images-na.ssl-images-amazon.com/images/I/81VU3bppf3L._AC_SL1500_.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    }
+  ],
+  "nesGames": [
+    {
+      "id": 200,
+      "title": "Super Mario Bros. 3",
+      "type": "Platform",
+      "language": "English",
+      "year": 1988,
+      "contentRating": "16+",
+      "cover": "https://images-na.ssl-images-amazon.com/images/I/613Py5NEsSL._AC_SY741_.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 201,
+      "title": "The Legend of Zelda",
+      "type": "Adventure",
+      "language": "English",
+      "year": 1986,
+      "contentRating": "16+",
+      "cover": "https://static.displate.com/857x1200/displate/2019-10-25/3fbf1deebcaad818f71dd4eaa0bd85af_cece78b3cb24d4cc9e6d10383bacd54b.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 202,
+      "title": "Tetris",
+      "type": "Puzzle",
+      "language": "English",
+      "year": 1984,
+      "contentRating": "16+",
+      "cover": "https://i.ebayimg.com/images/g/NMYAAOSwYBxark9o/s-l300.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 203,
+      "title": "Super Mario Bros.",
+      "type": "Platform",
+      "language": "English",
+      "year": 1985,
+      "contentRating": "16+",
+      "cover": "https://i.etsystatic.com/6824854/r/il/53debe/585887395/il_570xN.585887395_gpan.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 204,
+      "title": "Metroid",
+      "type": "Platform",
+      "language": "English",
+      "year": 1986,
+      "contentRating": "16+",
+      "cover": "https://i.pinimg.com/originals/b0/7d/ab/b07dab0650ebba9e9c341486e80d15c7.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 205,
+      "title": "Ghosts 'n Goblins",
+      "type": "Platform",
+      "language": "English",
+      "year": 1985,
+      "contentRating": "16+",
+      "cover": "https://i.pinimg.com/originals/b1/ee/ad/b1eeadf1b9976c645ae8ad606f6e6c26.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    }
+  ],
+  "psxGames": [
+    {
+      "id": 1,
+      "title": "Crash Team Racing",
+      "type": "Driving",
+      "language": "English",
+      "year": 1998,
+      "contentRating": "16+",
+      "cover": "https://giantbomb1.cbsistatic.com/uploads/original/8/87790/2133340-box_ctr.png",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 2,
+      "title": "Digimon World 3",
+      "type": "Rol",
+      "language": "English",
+      "year": 2001,
+      "contentRating": "16+",
+      "cover": "https://i.ebayimg.com/images/g/nEsAAOSw1y1dtypx/s-l1600.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 3,
+      "title": "Resident Evil 3 - Nemesis",
+      "type": "Terror",
+      "language": "English",
+      "year": 2002,
+      "contentRating": "16+",
+      "cover": "https://i.pinimg.com/originals/7f/20/22/7f20222799891504f1bee194e009b5c1.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 4,
+      "title": "Final Fantasy IX",
+      "type": "Rol",
+      "language": "English",
+      "year": 2002,
+      "contentRating": "16+",
+      "cover": "https://m.media-amazon.com/images/M/MV5BNTc4ZjkyODUtM2E0MC00MzVkLWJjYmQtZjQ5NjhjY2ZkNzA0XkEyXkFqcGdeQXVyMTA3NjAwMDc4._V1_.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Chrono Cross",
+      "type": "Rol",
+      "language": "English",
+      "year": 2002,
+      "contentRating": "16+",
+      "cover": "https://i.pinimg.com/originals/81/44/30/8144308b7237e45ae4166960df4bd102.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id":6,
+      "title": "Crash Bandicoot",
+      "type": "Adventure",
+      "language": "English",
+      "year": 1999,
+      "contentRating": "16+",
+      "cover": "https://i.ebayimg.com/images/g/ftMAAOSwRgJXlK1X/s-l300.jpg",
+      "description": "Vestibulum ac est lacinia nisi venenatis tristique",
+      "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
+    },
+    {
+      "id":7,
+      "title": "Rayman 2 The Great Escape",
+      "type": "Adventure",
+      "language": "English",
+      "year": 1999,
+      "contentRating": "16+",
+      "cover": "https://cdn.steamgriddb.com/grid/d4d2775cb2a95db2d267b98def4c3e6b.png",
       "description": "Vestibulum ac est lacinia nisi venenatis tristique",
       "source": "https://mdstrm.com/video/58333e214ad055d208427db5.mp4"
     }
