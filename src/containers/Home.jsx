@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import Search from '../components/Search'
+import Search from '../components/SearchBar/Search'
 import Carousel from '../components/Carousel'
 import CarouselItem from '../components/CarouselItem'
 
 import '../assets/styles/base.scss'
  
 const Home = ({myList, trends, originals}) => {
+    const [query, setQuery] = useState("")
+    const filteredTrends = trends.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
+    const filteredOriginals = originals.filter(item => item.title.toLowerCase().includes(query.toLowerCase()))
+
     return(
         <>
-            <Search />
+            <Search value={query} handleChange={(e) => setQuery(e.target.value) } />
 
             { myList?.length > 0 &&
                 <Carousel title='Mi Lista'>
@@ -17,15 +21,15 @@ const Home = ({myList, trends, originals}) => {
                 </Carousel>
             }
 
-            { originals?.length > 0 &&
+            { filteredOriginals?.length > 0 &&
                 <Carousel title='Añadidos Recientemente'>
-                    {originals.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
+                    {filteredOriginals.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
                 </Carousel>
             }
 
-            { trends?.length > 0 &&
+            { filteredTrends?.length > 0 &&
                 <Carousel title='Tendencias'>
-                    {trends.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
+                    {filteredTrends.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
                 </Carousel>
             }
 
