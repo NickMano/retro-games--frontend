@@ -1,4 +1,5 @@
-/* LOGIN */
+@import '../App.scss';
+
 .login {
     background: linear-gradient($secondary-color, $primary-color);
     min-height: calc(100vh - 200px);
@@ -45,6 +46,7 @@
     border: none;
     border-bottom: 3px solid white;
     font-size: 16px;
+    color: white;
 }
 
 .login__container--input:focus {
@@ -130,35 +132,3 @@
 .login__container--login a:hover {
     text-decoration: underline;
 }
-
-
-
-/* Error */
-
-.error {
-    width: 100%;
-    @extend .flex-center;
-    flex-direction: column;
-    justify-content: center;
-    height: calc(100vh - 180px);
-    background: linear-gradient($secondary-color, $primary-color);
-}
-
-.error__image{
-    width: 200px;
-}
-
-.error__title {
-    color: white;
-    font-size: 100px;
-    margin: 0;
-}
-
-.error__subtitle {
-    color: white;
-    font-size: 50px;
-    margin: 0;
-    font-weight: normal;
-    text-align: center;
-}
-

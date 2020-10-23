@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/styles/components/Footer.scss'
 
-const CarouselItem = () => (
+const Footer = () => (
     <footer className="footer">
         <a href="/">Términos de uso</a>
         <a href="/">Declaración de privacidad</a>
@@ -9,4 +9,4 @@ const CarouselItem = () => (
     </footer>
 )
 
-export default CarouselItem
+export default Footer
