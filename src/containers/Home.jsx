@@ -23,7 +23,6 @@ const Home = ({myList, trends, originals}) => {
                 </Carousel>
             }
 
-
             { trends?.length > 0 &&
                 <Carousel title='Tendencias'>
                     {trends.map( item =>  <CarouselItem key={item.id} {...item}/> ) }
