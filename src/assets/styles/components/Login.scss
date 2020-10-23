@@ -1,6 +1,7 @@
 @import "../base.scss";
 
 .login {
+  padding-top: 2em;
   background: linear-gradient($secondary-color, $primary-color);
   min-height: calc(100vh - 200px);
   @extend .flex-center;
