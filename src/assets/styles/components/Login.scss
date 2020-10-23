@@ -1,134 +1,134 @@
-@import '../App.scss';
+@import "../base.scss";
 
 .login {
-    background: linear-gradient($secondary-color, $primary-color);
-    min-height: calc(100vh - 200px);
-    @extend .flex-center;
-    justify-content: center;
+  background: linear-gradient($secondary-color, $primary-color);
+  min-height: calc(100vh - 200px);
+  @extend .flex-center;
+  justify-content: center;
 }
 
 .login__container {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid white;
-    border-radius: 40px;
-    padding: 60px 68px 40px;
-    min-height: 700px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    @media screen and (max-width: 600px) {
-        border: none;
-        background-color: transparent;
-        width: 100%;
-        padding: 20px;
-    } 
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  padding: 60px 68px 40px;
+  min-height: 700px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @media screen and (max-width: 600px) {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding: 20px;
+  }
 }
 
 .login__container--title {
-    color: white;
-    font-size: 40px;
+  color: white;
+  font-size: 40px;
 }
 
 .login__container--form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.login__container--form label{
-    font-size: 14px ;
+.login__container--form label {
+  font-size: 14px;
 }
 
-.login__container--input { 
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 3px solid white;
-    font-size: 16px;
-    color: white;
+.login__container--input {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid white;
+  font-size: 16px;
+  color: white;
 }
 
 .login__container--input:focus {
-    outline: none;
+  outline: none;
 }
 
 .login__container--button {
-    margin: 20px 0;
-    color: white;
-    padding: 16px;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: $theme-font;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 30px;
-    border: none
+  margin: 20px 0;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: $theme-font;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  border: none;
 }
 
 .login__container--button:focus {
-    outline: none;
+  outline: none;
 }
 
 .login__container--remember-me {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
 }
 
 .login__container--remember-me a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .login__container--remember-me a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.login__container--social-media{
-    color: white;
+.login__container--social-media {
+  color: white;
 }
 
 .login__container--social-media > div {
-    @extend .flex-center;
-    margin-bottom: 10px;
-    font-size: 14px;
+  @extend .flex-center;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 .login__container--social-media > div > img {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .login__container--register {
-    font-size: 14px;
-    color: white;
+  font-size: 14px;
+  color: white;
 }
 
 .login__container--register a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .login__container--register a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .login__container--login {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .login__container--login a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .login__container--login a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

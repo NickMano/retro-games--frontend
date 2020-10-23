@@ -2,7 +2,7 @@ import React from 'react'
 import '../assets/styles/components/NotFound.scss'
 const errorIcon = require('../images/icons8-info-200.png')
 
-import '../assets/styles/App.scss'
+import '../assets/styles/base.scss'
  
 const Error = () => (
     <div className="Login">

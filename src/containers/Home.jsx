@@ -4,7 +4,7 @@ import Search from '../components/Search'
 import Carousel from '../components/Carousel'
 import CarouselItem from '../components/CarouselItem'
 
-import '../assets/styles/App.scss'
+import '../assets/styles/base.scss'
  
 const Home = ({myList, trends, originals}) => {
     return(
