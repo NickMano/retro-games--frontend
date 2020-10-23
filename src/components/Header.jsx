@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from "react-redux";
 import { logoutRequest } from '../actions'
 import gravatar from '../utils/gravatar'
-import userIcon from '../assets/static/icons8-user-24.png'
+import userIcon from '../images/icons8-user-24.png'
 import '../assets/styles/components/Header.scss'
  
 const Header = props => {

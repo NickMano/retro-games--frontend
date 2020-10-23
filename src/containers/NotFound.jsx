@@ -1,6 +1,6 @@
 import React from 'react'
 import '../assets/styles/components/NotFound.scss'
-const errorIcon = require('../assets/static/icons8-info-200.png')
+const errorIcon = require('../images/icons8-info-200.png')
 
 import '../assets/styles/App.scss'
  

@@ -2,9 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { setFavorite, deleteFavorite } from '../actions'
 import '../assets/styles/components/CarouselItem.scss'
-import playIcon from '../assets/static/icons8-circled-play-50.png'
-import plusIcon from '../assets/static/icons8-add-50.png'
-import deleteIcon from '../assets/static/icons8-remove-50.png'
+import playIcon from '../images/icons8-circled-play-50.png'
+import plusIcon from '../images/icons8-add-50.png'
+import deleteIcon from '../images/icons8-remove-50.png'
 
 
 const CarouselItem = props => {
