@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from "react-redux";
-import { logoutRequest } from '../actions'
-import gravatar from '../utils/gravatar'
-import userIcon from '../images/icons8-user-24.png'
-import '../assets/styles/components/Header.scss'
+import { logoutRequest } from '../../actions'
+import userIcon from '../../images/icons8-user-24.png'
+import './Navbar.scss'
+import NavHam from '../nav-ham/NavHam';
  
-const Header = props => {
+const Navbar = props => {
     const { user } = props 
     const cssClassName = "header"
     const hasUser = Object.keys(user).length > 0
@@ -16,7 +16,7 @@ const Header = props => {
 
     return(
         <header className={`${cssClassName} ${cssClassName}--second-color`}>
-            <Link to='/' className={`${cssClassName}`}>
+            <Link to='/' className={`${cssClassName}__img`}>
                 <img 
                     className={`${cssClassName}__img`} 
                     src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" 
@@ -25,11 +25,7 @@ const Header = props => {
             </Link>
             <div className={`${cssClassName}__menu`}>
                 <div className="header__menu--profile">
-                    <img 
-                        src={hasUser ? gravatar(user.email) : userIcon} 
-                        alt={user.email} 
-                    />
-                    <p>Perfil</p>
+                    <NavHam />
                 </div>
                 <ul>
                     {hasUser 
@@ -57,4 +53,4 @@ const mapDispatchToProps = {
     logoutRequest
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
