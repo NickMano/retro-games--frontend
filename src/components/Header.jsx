@@ -8,17 +8,22 @@ import '../assets/styles/components/Header.scss'
  
 const Header = props => {
     const { user } = props 
+    const cssClassName = "header"
     const hasUser = Object.keys(user).length > 0
     const handleLogout = () => {
         props.logoutRequest({})
     }
 
     return(
-        <header className='header header--second-color'>
-            <Link to='/'>
-                <img className="header__img" src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" alt="Platzi Video" />
+        <header className={`${cssClassName} ${cssClassName}--second-color`}>
+            <Link to='/' className={`${cssClassName}`}>
+                <img 
+                    className={`${cssClassName}__img`} 
+                    src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" 
+                    alt="Platzi Video" 
+                />
             </Link>
-            <div className="header__menu">
+            <div className={`${cssClassName}__menu`}>
                 <div className="header__menu--profile">
                     <img 
                         src={hasUser ? gravatar(user.email) : userIcon} 
