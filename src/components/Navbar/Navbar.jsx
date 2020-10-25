@@ -1,21 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 import { connect } from "react-redux";
 import { logoutRequest } from '../../actions'
-import userIcon from '../../images/icons8-user-24.png'
 import './Navbar.scss'
 import NavHam from '../nav-ham/NavHam';
  
 const Navbar = props => {
-    const { user } = props 
+    const user = props.user
     const cssClassName = "header"
+    const pathname = props.location.pathname
+    const headerCssClassName = `${cssClassName} ${isPageWithSecondColor(pathname) ? `${cssClassName}--second-color` : ''}`
     const hasUser = Object.keys(user).length > 0
     const handleLogout = () => {
         props.logoutRequest({})
     }
 
     return(
-        <header className={`${cssClassName} ${cssClassName}--second-color`}>
+        <header className={headerCssClassName}>
             <Link to='/' className={`${cssClassName}__img`}>
                 <img 
                     className={`${cssClassName}__img`} 
@@ -30,9 +32,9 @@ const Navbar = props => {
                 <ul>
                     {hasUser 
                         ? <>
-                            <li><Link to='/login'>{user.email}</Link></li><li>
-                            <Link to='/login' onClick={handleLogout}>Cerrar sesion</Link></li>
-                            </>
+                            <li><Link to='/login'>{user.email}</Link></li>
+                            <li><Link to='/login' onClick={handleLogout}>Cerrar sesion</Link></li>
+                          </>
                         : <li><Link to='/login'>Iniciar sesion</Link></li>
                     }
                     
@@ -40,6 +42,10 @@ const Navbar = props => {
             </div>
         </header>
     )
+}
+
+const isPageWithSecondColor = location => {
+    return location == '/login' || location == '/register'
 }
 
 const mapStateToProps = state => {
@@ -53,4 +59,4 @@ const mapDispatchToProps = {
     logoutRequest
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navbar))

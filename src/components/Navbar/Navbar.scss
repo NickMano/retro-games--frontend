@@ -16,15 +16,10 @@ header {
   @include for-size(m) {
     height: 80px;
   }
-
-  &--second-color {
-    background-color: $secondary-color;
-  }
 }
 
-.header__menu li a {
-  color: white;
-  text-decoration: none;
+.header--second-color {
+  background-color: $secondary-color;
 }
 
 .header__menu ul {
@@ -45,6 +40,15 @@ header {
   @include for-size(s) {
     width: 24%;
     margin-left: 76%;
+  }
+
+  & li {
+    height: 20px;
+    padding-bottom: 1em;
+    & a {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
