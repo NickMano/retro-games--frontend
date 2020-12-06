@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import '../assets/styles/components/Login.scss'
 import { Link } from 'react-router-dom'
 import { loginRequest } from '../actions'
 
- 
+
 const Login = props => {
-    const [form, setValues] = useState({ email : ''})
+    const [form, setValues] = useState({ email: '' })
 
     const handleInput = event => {
         setValues({
@@ -14,30 +14,30 @@ const Login = props => {
             [event.target.name]: event.target.value
         })
     }
-    
+
     const handleSubmit = event => {
         event.preventDefault()
         props.loginRequest(form)
         props.history.push('/')
     }
 
-    return(
+    return (
         <section className="login">
             <section className="login__container">
                 <h2 className="login__container--title">Inicia Sesion</h2>
                 <form className="login__container--form" onSubmit={handleSubmit}>
-                    <input 
-                        type="text" 
-                        className="login__container--input" 
+                    <input
+                        type="text"
+                        className="login__container--input"
                         name="email"
-                        placeholder="Correo" 
+                        placeholder="Correo"
                         onChange={handleInput}
                     />
                     <input
-                        name="password" 
-                        type="password" 
-                        className="login__container--input" 
-                        placeholder="Contraseña" 
+                        name="password"
+                        type="password"
+                        className="login__container--input"
+                        placeholder="Contraseña"
                         onChange={handleInput}
 
                     />
@@ -52,9 +52,9 @@ const Login = props => {
                 </form>
                 <section className="login__container--social-media">
                     <div><img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Google_icon-icons.com_66793.png" alt="Google" />Inicia sesión con Google</div>
-                    <div><img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Twitter_icon-icons.com_66803.png" alt="Twitter"/>Inicia sesión con Twitter</div>
+                    <div><img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Twitter_icon-icons.com_66803.png" alt="Twitter" />Inicia sesión con Twitter</div>
                 </section>
-                <p className="login__container--register">No tienes ninguna cuenta 
+                <p className="login__container--register">No tienes ninguna cuenta
                     <Link to='/register'> Regístrate</Link>
                 </p>
             </section>
@@ -62,8 +62,8 @@ const Login = props => {
     )
 }
 
-const mapDispachToProps =  {
+const mapDispatchToProps = {
     loginRequest
 }
 
-export default connect(null, mapDispachToProps)(Login)
+export default connect(null, mapDispatchToProps)(Login)
