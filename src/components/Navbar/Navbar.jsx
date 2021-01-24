@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { logoutRequest } from '../../actions'
 import './Navbar.scss'
 import NavHam from '../nav-ham/NavHam';
+import Logo from '../../images/logo.png'
  
 const Navbar = props => {
     const user = props.user
@@ -21,7 +22,7 @@ const Navbar = props => {
             <Link to='/' className={`${cssClassName}__img`}>
                 <img 
                     className={`${cssClassName}__img`} 
-                    src="https://raw.githubusercontent.com/platzi/PlatziVideo/feature/react/src/assets/static/logo-platzi-video-BW2.png" 
+                    src={Logo}
                     alt="Platzi Video" 
                 />
             </Link>
