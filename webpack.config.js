@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', ],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -24,8 +24,8 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: {
-          loader: 'awesome-typescript-loader'
-        }
+          loader: 'awesome-typescript-loader',
+        },
       },
       {
         test: /\.html$/,
@@ -46,11 +46,11 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: { 
+            options: {
               name: 'assets/[hash].[ext]',
               esModule: false,
-           },
-          }
+            },
+          },
         ],
       },
     ],

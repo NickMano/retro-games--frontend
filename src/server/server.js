@@ -1,10 +1,10 @@
-import express from "express";
+import express from 'express';
 import webpack from 'webpack';
 import config from './config';
 
 const { ENV, PORT } = config;
 
-const app = express()
+const app = express();
 
 if (config.env === 'development') {
   const webpackConfig = require('../../webpack.config');
@@ -18,12 +18,12 @@ if (config.env === 'development') {
 }
 
 app.get('*', (req, res) => {
-    res.send({
-        hello: 'express'
-    })
-})
+  res.send({
+    hello: 'express',
+  });
+});
 
 app.listen(PORT, (err) => {
-    if (err) console.error(err)
-    else console.log(`Server running on port ${PORT}`)
-})
+  if (err) console.error(err);
+  else console.log(`Server running on port ${PORT}`);
+});
