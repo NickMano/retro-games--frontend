@@ -66,6 +66,11 @@ const renderApp = (req, res) => {
       </StaticRouter>
     </Provider>,
   );
+
+  res.set(
+    'Content-Security-Policy',
+    "script-src 'self' 'sha256-xICtRF1AcMKVnMPpCzXNMBtMuOIlXACQ7kcPYnmSvik='",
+  );
   res.send(setResponse(html, preloadedState));
 };
 
