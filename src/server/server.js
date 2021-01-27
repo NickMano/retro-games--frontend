@@ -11,6 +11,7 @@ import serverRoutes from '../frontend/routes/serverRoutes';
 import reducer from '../frontend/reducers';
 import data from '../frontend/db.json';
 import config from './config';
+import getManifest from './getManifest';
 
 const { ENV, PORT } = config;
 
@@ -26,20 +27,27 @@ if (ENV === 'development') {
   app.use(webpackDevMiddleware(compiler, serverConfig));
   app.use(webpackHotMiddleware(compiler));
 } else {
+  app.use((req, res, next) => {
+    if (!req.hashManifest) { req.hashManifest = getManifest(); }
+    next();
+  });
   app.use(express.static(`${__dirname}/public`));
   app.use(helmet());
   app.use(helmet.permittedCrossDomainPolicies());
   app.disable('x-powered-by');
 }
 
-const setResponse = (html, preloadedState) => {
+const setResponse = (html, preloadedState, manifest) => {
+  const mainStyle = manifest ? manifest['main.css'] : 'assets/app.css';
+  const mainBuild = manifest ? manifest['main.js'] : 'assets/app.js';
+
   return (`
     <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
             <link rel="icon" href="./favicon.ico">
-            <link rel="stylesheet" href="assets/app.css" type="text/css"/> 
+            <link rel="stylesheet" href="${mainStyle}" type="text/css"/> 
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>RetroGames</title>
         </head>
@@ -50,7 +58,7 @@ const setResponse = (html, preloadedState) => {
             <script>
               window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
             </script>
-            <script src="assets/app.js" type="text/javascript"></script>
+            <script src="${mainBuild}" type="text/javascript"></script>
         </body>
         </html>
     `);
@@ -71,7 +79,7 @@ const renderApp = (req, res) => {
     'Content-Security-Policy',
     "script-src 'self' 'sha256-xICtRF1AcMKVnMPpCzXNMBtMuOIlXACQ7kcPYnmSvik='",
   );
-  res.send(setResponse(html, preloadedState));
+  res.send(setResponse(html, preloadedState, req.hashManifest));
 };
 
 app.get('*', renderApp);
