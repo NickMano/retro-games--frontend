@@ -87,7 +87,7 @@ module.exports = {
       filename: '[path][base].gz',
     }),
     new MiniCssExtractPlugin({
-      filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css©',
+      filename: isDev ? 'assets/app.css' : 'assets/app-[hash].css',
     }),
     isDev ? () => {} : new WebpackManifestPlugin(),
   ],
