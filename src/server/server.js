@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require */
 import express from 'express';
 import webpack from 'webpack';
 import React from 'react';
@@ -12,6 +14,7 @@ import reducer from '../frontend/reducers';
 import data from '../frontend/db.json';
 import config from './config';
 import getManifest from './getManifest';
+import setHtmlResponse from './setHtmlResponse';
 
 const { ENV, PORT } = config;
 
@@ -37,35 +40,6 @@ if (ENV === 'development') {
   app.disable('x-powered-by');
 }
 
-const setResponse = (html, preloadedState, manifest) => {
-  const mainStyle = manifest ? manifest['vendors.css'] : 'assets/vendors.css';
-  const mainBuild = manifest ? manifest['main.js'] : 'assets/app.js';
-  const vendorBuild = manifest ? manifest['vendors.js'] : 'assets/vendor.js';
-
-  return (`
-    <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <link rel="icon" href="./favicon.ico">
-            <link rel="stylesheet" href="${mainStyle}" type="text/css"/> 
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>RetroGames</title>
-        </head>
-        <body>
-            <div id="app">
-            ${html}  
-            </div>
-            <script>
-              window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(/</g, '\\u003c')}
-            </script>
-            <script src="${mainBuild}" type="text/javascript"></script>
-            <script src="${vendorBuild}" type="text/javascript"></script>
-        </body>
-        </html>
-    `);
-};
-
 const renderApp = (req, res) => {
   const store = createStore(reducer, data);
   const preloadedState = store.getState();
@@ -79,9 +53,9 @@ const renderApp = (req, res) => {
 
   res.set(
     'Content-Security-Policy',
-    "script-src 'self' 'sha256-xICtRF1AcMKVnMPpCzXNMBtMuOIlXACQ7kcPYnmSvik='",
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
   );
-  res.send(setResponse(html, preloadedState, req.hashManifest));
+  res.send(setHtmlResponse(html, preloadedState, req.hashManifest));
 };
 
 app.get('*', renderApp);
