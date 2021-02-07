@@ -5,7 +5,7 @@ import axios from 'axios';
 import config from '../../../config';
 
 passport.use(
-  new BasicStrategy(async (email, password, cb) => {
+  new BasicStrategy((async (email, password, cb) => {
     try {
       const { data, status } = await axios({
         url: `${config.API_URL}/api/auth/sign-in`,
@@ -15,19 +15,19 @@ passport.use(
           username: email,
         },
         data: {
-          apiToken: config.API_KEY_TOKEN,
+          apiKeyToken: config.API_KEY_TOKEN,
         },
       });
 
       if (!data || status !== 200) {
-        cb(boom.unauthorized(), false);
+        return cb(boom.unauthorized(), false);
       }
 
       return cb(null, data);
 
-    } catch (err) {
-      cb(err);
+    } catch (error) {
+      cb(error);
     }
-  }),
+  })),
 );
 

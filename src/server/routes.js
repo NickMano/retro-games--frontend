@@ -20,7 +20,7 @@ const routes = (app) => {
             next(boom.unauthorized());
           }
 
-          const { token, user } = data;
+          const { token, ...user } = data;
 
           res.cookie('token', token, {
             httpOnly: !config.DEV,
@@ -29,8 +29,8 @@ const routes = (app) => {
 
           res.status(200).json(user);
         });
-      } catch (err) {
-        next(boom.unauthorized());
+      } catch (error) {
+        next(error);
       }
     })(req, res, next);
   });
@@ -40,7 +40,7 @@ const routes = (app) => {
 
     try {
       await axios({
-        url: `${config.apiUrl}/api/auth/sign-up`,
+        url: `${config.API_URL}/api/auth/sign-up`,
         method: 'post',
         data: user,
       });
@@ -61,7 +61,7 @@ const routes = (app) => {
       const { token } = req.cookies;
 
       const { data, status } = await axios({
-        url: `${config.apiUrl}/api/user-movies`,
+        url: `${config.API_URL}/api/user-movies`,
         headers: { Authorization: `Bearer ${token}` },
         method: 'post',
         data: userMovie,
@@ -83,7 +83,7 @@ const routes = (app) => {
       const { token } = req.cookies;
 
       const { data, status } = await axios({
-        url: `${config.apiUrl}/api/user-movies/${userMovieId}`,
+        url: `${config.API_URL}/api/user-movies/${userMovieId}`,
         headers: { Authorization: `Bearer ${token}` },
         method: 'delete',
       });

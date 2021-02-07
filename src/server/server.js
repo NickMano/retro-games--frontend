@@ -65,7 +65,7 @@ const renderApp = (req, res) => {
 };
 
 app.get('*', renderApp);
-app.get(routes);
+routes(app);
 
 app.listen(PORT, (err) => {
   if (err) console.error(err);
