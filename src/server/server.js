@@ -9,12 +9,14 @@ import { createStore } from 'redux';
 import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import helmet from 'helmet';
+import cookieParser from 'cookie-parser';
 import serverRoutes from '../frontend/routes/serverRoutes';
 import reducer from '../frontend/reducers';
 import data from '../frontend/db.json';
 import config from './config';
 import getManifest from './getManifest';
 import setHtmlResponse from './setHtmlResponse';
+import routes from './routes';
 
 const { ENV, PORT } = config;
 
@@ -40,6 +42,10 @@ if (ENV === 'development') {
   app.disable('x-powered-by');
 }
 
+//body parser
+app.use(express.json());
+app.use(cookieParser());
+
 const renderApp = (req, res) => {
   const store = createStore(reducer, data);
   const preloadedState = store.getState();
@@ -59,6 +65,7 @@ const renderApp = (req, res) => {
 };
 
 app.get('*', renderApp);
+app.get(routes);
 
 app.listen(PORT, (err) => {
   if (err) console.error(err);
