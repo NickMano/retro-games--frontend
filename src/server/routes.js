@@ -103,14 +103,14 @@ const routes = (app) => {
 
   app.get(
     '/auth/google-oauth',
-    passport.authenticate('google-oauth', {
+    passport.authenticate('google', {
       scope: ['email', 'profile', 'openid'],
     }),
   );
 
   app.get(
     '/auth/google-oauth/callback',
-    passport.authenticate('google-oauth', { session: false }),
+    passport.authenticate('google', { session: false }),
     (req, res, next) => {
       if (!req.user) {
         next(boom.unauthorized());

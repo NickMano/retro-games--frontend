@@ -64,8 +64,8 @@ const renderApp = (req, res) => {
   res.send(setHtmlResponse(html, preloadedState, req.hashManifest));
 };
 
-app.get('*', renderApp);
 routes(app);
+app.get('*', renderApp);
 
 app.listen(PORT, (err) => {
   if (err) console.error(err);
