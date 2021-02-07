@@ -3,8 +3,11 @@ import boom from '@hapi/boom';
 import axios from 'axios';
 import config from './config';
 
-//basic strategy
+//Basic strategy
 require('./utils/auth/strategies/basic');
+
+// OAuth strategy
+require('./utils/auth/strategies/oauth');
 
 const routes = (app) => {
 
@@ -97,6 +100,32 @@ const routes = (app) => {
       next(error);
     }
   });
+
+  app.get(
+    '/auth/google-oauth',
+    passport.authenticate('google-oauth', {
+      scope: ['email', 'profile', 'openid'],
+    }),
+  );
+
+  app.get(
+    '/auth/google-oauth/callback',
+    passport.authenticate('google-oauth', { session: false }),
+    (req, res, next) => {
+      if (!req.user) {
+        next(boom.unauthorized());
+      }
+
+      const { token, ...user } = req.user;
+
+      res.cookie('token', token, {
+        httpOnly: !config.DEV,
+        secure: !config.DEV,
+      });
+
+      res.status(200).json(user);
+    },
+  );
 };
 
 export default routes;
