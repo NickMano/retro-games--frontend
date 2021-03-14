@@ -41,7 +41,6 @@ const routes = (app) => {
   app.post('/auth/sign-up', async (req, res, next) => {
     const { body: user } = req;
     try {
-      console.log('acccaaa');
       const userData = await axios({
         url: `${config.API_URL}/api/auth/sign-up`,
         method: 'post',
