@@ -29,7 +29,7 @@ const Register = (props) => {
     <section className='login'>
       <section className='login__container'>
         <h2 className='login__container--title'>Registrate</h2>
-        <form className='register__container--form' onSubmit={handleSubmit}>
+        <form className='login__container--form' onSubmit={handleSubmit}>
           <input
             name='name'
             className='login__container--input'

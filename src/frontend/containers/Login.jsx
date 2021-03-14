@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import '../assets/styles/components/Login.scss';
 import { Link } from 'react-router-dom';
-import { loginRequest } from '../actions';
+import { loginUser } from '../actions';
 
 const Login = (props) => {
   const [form, setValues] = useState({ email: '' });
@@ -17,8 +17,7 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.loginRequest(form);
-    props.history.push('/');
+    props.loginUser(form, '/');
   };
 
   return (
@@ -41,7 +40,7 @@ const Login = (props) => {
             onChange={handleInput}
           />
           <button
-            type='button'
+            type='submit'
             className='login__container--button'
           >
             Iniciar sesion
@@ -76,11 +75,11 @@ const Login = (props) => {
 };
 
 Login.propTypes = {
-  loginRequest: PropTypes.func,
+  loginUser: PropTypes.func,
 };
 
 const mapDispatchToProps = {
-  loginRequest,
+  loginUser,
 };
 
 export default connect(null, mapDispatchToProps)(Login);
