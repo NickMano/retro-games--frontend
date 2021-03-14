@@ -12,7 +12,6 @@ import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
 import serverRoutes from '../frontend/routes/serverRoutes';
 import reducer from '../frontend/reducers';
-import data from '../frontend/db.json';
 import config from './config';
 import getManifest from './getManifest';
 import setHtmlResponse from './setHtmlResponse';
@@ -47,12 +46,23 @@ app.use(express.json());
 app.use(cookieParser());
 
 const renderApp = (req, res) => {
-  const store = createStore(reducer, data);
+  const { email, name, id } = req.cookies;
+  const initialState = {
+    user: id ? { email, name, id } : {},
+    myList: [],
+    trends: [],
+    switchGames: [],
+    nesGames: [],
+    psxGames: [],
+  };
+
+  const store = createStore(reducer, initialState);
+  const isLogged = (initialState.user.id);
   const preloadedState = store.getState();
   const html = renderToString(
     <Provider store={store}>
       <StaticRouter location={req.url} context={{}}>
-        {renderRoutes(serverRoutes)}
+        {renderRoutes(serverRoutes(isLogged))}
       </StaticRouter>
     </Provider>,
   );
