@@ -10,6 +10,7 @@ import { StaticRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
+import axios from 'axios';
 import serverRoutes from '../frontend/routes/serverRoutes';
 import reducer from '../frontend/reducers';
 import config from './config';
@@ -17,7 +18,7 @@ import getManifest from './getManifest';
 import setHtmlResponse from './setHtmlResponse';
 import routes from './routes';
 
-const { ENV, PORT } = config;
+const { ENV, PORT, API_URL } = config;
 
 const app = express();
 
@@ -45,9 +46,10 @@ if (ENV === 'development') {
 app.use(express.json());
 app.use(cookieParser());
 
-const renderApp = (req, res) => {
-  const { email, name, id } = req.cookies;
-  const initialState = {
+const renderApp = async (req, res) => {
+  const { email, name, id, token } = req.cookies;
+
+  let initialState = {
     user: id ? { email, name, id } : {},
     myList: [],
     trends: [],
@@ -55,6 +57,23 @@ const renderApp = (req, res) => {
     nesGames: [],
     psxGames: [],
   };
+
+  try {
+    let gameList = await axios({
+      url: `${API_URL}/api/games`,
+      headers: { Authorization: `Bearer ${token}` },
+      method: 'get',
+    });
+    gameList = gameList.data.data;
+    initialState = {
+      ...initialState,
+      switchGames: gameList.filter((game) => game.platform.includes('Nintendo Switch') && game._id),
+      nesGames: gameList.filter((game) => game.platform.includes('Nintendo Entertainment System') && game._id),
+      psxGames: gameList.filter((game) => game.platform.includes('PSX') && game._id),
+    };
+  } catch (err) {
+    console.log(err);
+  }
 
   const store = createStore(reducer, initialState);
   const isLogged = (initialState.user.id);
